@@ -4,7 +4,7 @@ This is the official repository for ["_GeoLLM: Extracting Geospatial Knowledge f
 
 Authors: 
 [Rohin Manvi](https://www.linkedin.com/in/rohin-manvi-2a9226187/) <sup>1</sup>,
-[Samar Khanna](https://www.linkedin.com/in/samar-khanna-133b8190/), 
+[Samar Khanna](https://samar-khanna.github.io), 
 [Gengchen Mai](https://gengchenmai.github.io/),
 [Marshall Burke](https://web.stanford.edu/~mburke/), 
 [David B. Lobell](https://earth.stanford.edu/people/david-lobell#gs.5vndff), 
@@ -12,6 +12,7 @@ Authors:
 
 <sub><sup>1</sup> Corresponding author, rohinm@cs.stanford.edu.</sub>
 
+---
 
 ### Pregenerated GeoLLM prompts
 
@@ -66,6 +67,8 @@ An example:
 python3 generate_geollm_prompts_at_location.py prompts/bay_area_prompts.jsonl 2000 37.13930393009039 -122.54505349168528 38.03830072195632 -121.78355363422295
 ```
 
+---
+
 ### Zero-shot predictions (no fine-tuning required)
 
 You can use the `make_predictions_and_visualize.py` script to make zero-shot predictions with any LLM of your choice from the OpenAI, Google, or Together APIs. Please note that while zero-shot predictions can be quite accurate, they can contain biases. Outputs will be in csv and html formats in the results folder for predictions and visualization, respectively.
@@ -103,6 +106,8 @@ Where:
 - `<PROMPTS_FILE>` is the path to the file with geollm prompts for each ground truth data point.
 
 Once you have a fine-tuned OpenAI model, simply use the finetuned model with the `make_predictions_and_visualize.py` script.
+
+---
 
 ### Evaluating performance
 
