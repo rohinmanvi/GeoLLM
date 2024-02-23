@@ -71,7 +71,7 @@ python3 generate_geollm_prompts_at_location.py prompts/bay_area_prompts.jsonl 20
 
 ### Zero-shot predictions (no fine-tuning required)
 
-You can use the `make_predictions_and_visualize.py` script to make zero-shot predictions with any LLM of your choice from the OpenAI, Google, or Together APIs. Please note that while zero-shot predictions can be quite accurate, they can contain biases. Outputs will be in csv and html formats in the results folder for predictions and visualization, respectively.
+You can use the `make_predictions_and_visualize.py` script to make zero-shot predictions with any LLM of your choice from the OpenAI, Google, or Together APIs. Please note that while zero-shot predictions can be quite accurate, they can contain biases, especially for subjective topics (as shown in ["_Large Language Models are Geographically Biased_"](https://arxiv.org/abs/2402.02680)). Outputs will be in csv and html formats in the results folder for predictions and visualization, respectively.
 
 ```shell
 python3 make_predictions_and_visualize.py <API> <API_KEY> <MODEL_NAME> <PROMPTS_FILE> <TASK_NAME>
@@ -129,7 +129,7 @@ python3 calculate_spearman_correlation.py results/gpt_3_5_turbo_0613_Infant_Mort
 
 ### Evaluating biases
 
-To evaluate the biases in the predictions made by the LLM, you can use the `calculate_bias_score.py` script. This script will calculate the bias score as defined in our paper.
+To evaluate the biases in the predictions made by the LLM, you can use the `calculate_bias_score.py` script. This script will calculate the bias score as defined in our paper. This should only be used with predictions on sensitive subjective topics, as the bias score is only meaningful for such topics.
 
 ```shell
 python3 calculate_bias_score.py <PREDICTIONS_CSV_FILE> <GEOTIFF_FILE> <NUM_PROMPTS>
@@ -143,7 +143,7 @@ Where:
 An example:
 
 ```shell
-python3 calculate_bias_score.py results/gpt_3_5_turbo_0613_Infant_Mortality_Rate_world_prompts.csv data/povmap_global_subnational_infant_mortality_rates_v2_01.tif 2000
+python3 calculate_bias_score.py results/gpt_3_5_turbo_0613_Average_Attractiveness_of_Residents_world_prompts_expected_value.csv data/povmap_global_subnational_infant_mortality_rates_v2_01.tif 2000
 ```
 
 Note that the bias score can be negative if the predictions are negatively correlated with the anchoring bias distribution. This indicates that the predictions are biased in the opposite direction of with respect to the anchoring bias distribution. In this case, it would indicate that the predictions are biased towards infant _survival_ rates.
