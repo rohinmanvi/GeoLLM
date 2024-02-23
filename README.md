@@ -151,13 +151,12 @@ Note that the bias score can be negative if the predictions are negatively corre
 ## Citation
 If you found GeoLLM helpful, please cite our papers (second paper enabled zero-shot predictions and evaluated biases):
 ```
-@misc{manvi2023geollm,
-      title={GeoLLM: Extracting Geospatial Knowledge from Large Language Models}, 
-      author={Rohin Manvi and Samar Khanna and Gengchen Mai and Marshall Burke and David Lobell and Stefano Ermon},
-      year={2023},
-      eprint={2310.06213},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{manvi2024geollm,
+      title={Geo{LLM}: Extracting Geospatial Knowledge from Large Language Models},
+      author={Rohin Manvi and Samar Khanna and Gengchen Mai and Marshall Burke and David B. Lobell and Stefano Ermon},
+      booktitle={The Twelfth International Conference on Learning Representations},
+      year={2024},
+      url={https://openreview.net/forum?id=TqL2xBwXP3}
 }
 
 @misc{manvi2024large,
