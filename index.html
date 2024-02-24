@@ -215,16 +215,16 @@
 <section class="section" id="Dataset">
   <div class="container is-max-desktop content">
     <h2 class="title">Performance</h2>
-        
+        We find that popular LLM models such as GPT-3.5 and Llama 2 can be fine-tuned to achieve state-of-the-art performance on a variety of large-scale 
+        geospatial datasets for tasks including assessing population density, asset wealth, mean income, women's education and more.
         <img src="static/images/main_results.png" height="100%">
-
-        Below is the table of mean and standard deviation of pixel values for each channel across the fMoW Sentinel training dataset.
-        Note that channel B10 does not contain bottom-of-atmosphere information, and is no longer accessible on Google Earth Engine.
-        Further details can be found <a href="https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-2-msi/resolutions/spatial">here</a>.
+        GPT-3.5, Llama 2, and RoBERTa, show a 70%, 43%, and 13% improvement in Pearson's r^2 respectively over baselines that use nearest neighbors and 
+        use information directly from the prompt, suggesting that the models' geospatial knowledge scales with their size and the size of their pretraining 
+        dataset. LLMs are also remarkably sample efficiency.
         <img src="static/images/additional_visualizations.png" height="100%">
-
+        Constructing the right prompt is key to extracting geospatial knowledge. Our ablations find that prompts constructed from map data allow the models 
+        to more efficiently access their knowledge.
         <img src="static/images/ablations.png" height="100%">
-
   </div>
 </section>
 
