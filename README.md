@@ -1,7 +1,7 @@
 # GeoLLM
 **[Website](https://rohinmanvi.github.io/GeoLLM)**
 
-This is the official repository for ["_GeoLLM: Extracting Geospatial Knowledge from Large Language Models_"](https://arxiv.org/abs/2310.06213) (ICLR 2024) and ["_Large Language Models are Geographically Biased_"](https://arxiv.org/abs/2402.02680).
+This is the official repository for ["_GeoLLM: Extracting Geospatial Knowledge from Large Language Models_"](https://arxiv.org/abs/2310.06213) (ICLR 2024) and ["_Large Language Models are Geographically Biased_"](https://arxiv.org/abs/2402.02680) (ICML 2024).
 
 Authors: 
 [Rohin Manvi](https://www.linkedin.com/in/rohin-manvi-2a9226187/) <sup>1</sup>,
